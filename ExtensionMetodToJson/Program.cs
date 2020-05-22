@@ -10,23 +10,23 @@
         {
             Model model = new Model();
             model.Id = Guid.NewGuid();
-            model.Name = "Pawel";
+            model.Name = "Adam";
+
+            var resultJson = model.ToJson();
+            var resultXml = model.ToXml();
+
+            Console.WriteLine(resultJson);
+            Console.WriteLine("-------------------------------------------------------------------------------------------");
+            Console.WriteLine(resultXml);
 
 
-            var result = model.ToXml();
-
-            Console.WriteLine(result);
-
-
-
-
-            string jsonText = @"{""Id"":""cea6ee3b-e0b8-46f4-a903-9983923be409"",""Name"":""Pawelllllll""}";
+            string jsonText = @"{""Id"":""cea6ee3b-e0b8-46f4-a903-9983923be409"",""Name"":""Wojciech""}";
 
 
             var modelFromJson = jsonText.FromJson<Model>();
 
-            Console.Write(modelFromJson.Id);
-            Console.Write(modelFromJson.Name);
+            Console.WriteLine($"Id: {modelFromJson.Id}");
+            Console.WriteLine($"Name: {modelFromJson.Name}");
 
 
             Console.ReadKey();
