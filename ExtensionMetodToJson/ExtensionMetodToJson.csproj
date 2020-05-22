@@ -71,9 +71,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IToJson.cs" />
-    <Compile Include="JsonDocumentExtensions.cs" />
-    <Compile Include="Model.cs" />
+    <Compile Include="Extensions\XmlDocumentExtensions.cs" />
+    <Compile Include="Interfaces\IToJson.cs" />
+    <Compile Include="Extensions\JsonDocumentExtensions.cs" />
+    <Compile Include="Interfaces\IToXml.cs" />
+    <Compile Include="Models\Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -81,5 +83,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,8 @@
 ﻿namespace Jaroszek.ProofOfConcept.ExtensionMetodToJson
 {
     using System;
+    using Extensions;
+    using Models;
 
     class Program
     {
@@ -11,7 +13,7 @@
             model.Name = "Pawel";
 
 
-            var result = model.ToJson();
+            var result = model.ToXml();
 
             Console.WriteLine(result);
 
@@ -19,6 +21,7 @@
 
 
             string jsonText = @"{""Id"":""cea6ee3b-e0b8-46f4-a903-9983923be409"",""Name"":""Pawelllllll""}";
+
 
             var modelFromJson = jsonText.FromJson<Model>();
 
